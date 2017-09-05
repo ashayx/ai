@@ -85,11 +85,11 @@ header{
 	width: 100%;
 	height: 130px;
 	z-index: 99;
-	background-color: #41c17d;
-	background-image: -moz-linear-gradient(bottom, #47ad76 0%, #47ad76 0.27%, #40c27d 99.46%, #40c27d 100%);
+	background-color: #222;
+	/* background-image: -moz-linear-gradient(bottom, #47ad76 0%, #47ad76 0.27%, #40c27d 99.46%, #40c27d 100%);
 	background-image: -o-linear-gradient(bottom, #47ad76 0%, #47ad76 0.27%, #40c27d 99.46%, #40c27d 100%);
 	background-image: -webkit-linear-gradient(bottom, #47ad76 0%, #47ad76 0.27%, #40c27d 99.46%, #40c27d 100%);
-	background-image: linear-gradient(bottom, #47ad76 0%, #47ad76 0.27%, #40c27d 99.46%, #40c27d 100%);
+	background-image: linear-gradient(bottom, #47ad76 0%, #47ad76 0.27%, #40c27d 99.46%, #40c27d 100%); */
 }
 
 header .logo{
@@ -184,8 +184,8 @@ header .social li:first-child{
 	display: block;
 	position: relative;
 	width: 100%;
-	height: 560px;
-	background: url('../img/banner.jpg') no-repeat fixed center center;	
+	min-height: 380px;
+	background: url('../img/banner.jpg') no-repeat center center;	
 	background-size: cover;
 }
 
@@ -912,3 +912,8 @@ footer .copyright a{
 .back-top img {
 	width: 100%;
 }
+
+.owl-carousel div {
+	/* margin: 10px; */
+}
+

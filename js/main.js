@@ -55,7 +55,7 @@ $(document).ready(function(){
 
 
 	//parallax effect initialization
-	$('.hero').parallax("15%", 0.3);
+	// $('.hero').parallax("15%", 0.3);
 	
 
 
@@ -85,27 +85,27 @@ $(document).ready(function(){
 
 
 	//Testimonials slider initialization
-	$("#tslider").owlCarousel({
-		items : 2,
-		navigation : true,
-		pagination : false,
-		slideSpeed : 300,
-		paginationSpeed : 400,
-		// singleItem: true,
-		responsive: true,
-		autoPlay : true,
-		transitionStyle : "fade"
-	});
+	// $("#tslider").owlCarousel({
+	// 	items : 2,
+	// 	navigation : true,
+	// 	pagination : false,
+	// 	slideSpeed : 300,
+	// 	paginationSpeed : 400,
+	// 	// singleItem: true,
+	// 	responsive: true,
+	// 	autoPlay : true,
+	// 	transitionStyle : "fade"
+	// });
 
 
 	 $('#owl-demo').owlCarousel({
-	 	// items : 2,
-	 	autoPlay: 3000,
+	 	items : 3,
+	 	// autoPlay: 3000,
 	 	paginationSpeed: 800,
 	 	slideSpeed: 200,
-	 	transitionStyle : "fade",
-	 	navigation: true,
-        navigationText: ["上一个","下一个"]
+	 	responsive: true,
+	 	// navigation: true,
+        // navigationText: ["上一个","下一个"]
 	 });
 
 
@@ -152,6 +152,19 @@ $(document).ready(function(){
 
 
 	//Popup video
+	for (var i = 0; i < 5; i++) {
+		var v = `#play_video${i}`
+		console.log(v)
+
+		$(v).click(function(e){
+		e.preventDefault();	
+
+		var video_link = $(this).data('video');
+		video_link = '<iframe src="' + video_link + '" width="500" height="208" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>';
+
+		$('.about_video').append(video_link).fadeIn(200);
+	});
+	}
 	$('#play_video').click(function(e){
 		e.preventDefault();	
 
